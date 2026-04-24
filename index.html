@@ -272,9 +272,32 @@ const SYMBOLS = [
     short: 'こうじょう',
     desc: '機械の歯車の形',
     svg: `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-      <path d="M30,4 L33,14 L41,10 L43,20 L53,20 L49,28 L56,34 L48,38 L50,48 L40,46 L36,55 L30,48 L24,55 L20,46 L10,48 L12,38 L4,34 L11,28 L7,20 L17,20 L19,10 L27,14 Z"
-        stroke="#222" stroke-width="2" fill="none" stroke-linejoin="round"/>
-      <circle cx="30" cy="30" r="9" stroke="#222" stroke-width="2.5" fill="none"/>
+      <!-- center circle -->
+      <circle cx="30" cy="30" r="11" stroke="#222" stroke-width="3" fill="none"/>
+      <!-- Top: ray + tick -->
+      <line x1="30" y1="17" x2="30" y2="8"    stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="26" y1="8"  x2="34" y2="8"    stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <!-- Top-right: ray + tick -->
+      <line x1="39.8" y1="20.2" x2="45.7" y2="14.3" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="42.9" y1="17.1" x2="48.5" y2="11.5" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <!-- Right: ray + tick -->
+      <line x1="43"  y1="30" x2="52" y2="30"  stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="52"  y1="26" x2="52" y2="34"  stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <!-- Bottom-right: ray + tick -->
+      <line x1="39.8" y1="39.8" x2="45.7" y2="45.7" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="48.5" y1="42.9" x2="42.9" y2="48.5" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <!-- Bottom: ray + tick -->
+      <line x1="30" y1="43" x2="30" y2="52"   stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="26" y1="52" x2="34" y2="52"   stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <!-- Bottom-left: ray + tick -->
+      <line x1="20.2" y1="39.8" x2="14.3" y2="45.7" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="11.5" y1="42.9" x2="17.1" y2="48.5" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <!-- Left: ray + tick -->
+      <line x1="17"  y1="30" x2="8"  y2="30"  stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="8"   y1="26" x2="8"  y2="34"  stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <!-- Top-left: ray + tick -->
+      <line x1="20.2" y1="20.2" x2="14.3" y2="14.3" stroke="#222" stroke-width="3" stroke-linecap="round"/>
+      <line x1="17.1" y1="11.5" x2="11.5" y2="17.1" stroke="#222" stroke-width="3" stroke-linecap="round"/>
     </svg>`
   },
   {
