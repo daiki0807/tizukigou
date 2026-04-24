@@ -21,7 +21,7 @@
       background: #fff;
       border-radius: 24px;
       padding: 32px 28px;
-      max-width: 520px;
+      max-width: 540px;
       width: 100%;
       box-shadow: 0 24px 72px rgba(0,0,0,0.35);
       text-align: center;
@@ -29,38 +29,18 @@
 
     /* ── START ── */
     .start-icon { font-size: 4.5rem; margin-bottom: 12px; }
-    .start-title {
-      font-size: 2rem;
-      font-weight: bold;
-      color: #2c3e8c;
-      margin-bottom: 6px;
-    }
+    .start-title { font-size: 2rem; font-weight: bold; color: #2c3e8c; margin-bottom: 6px; }
     .start-sub { color: #777; margin-bottom: 24px; font-size: 0.95rem; }
     .start-info {
-      background: #f0f6ff;
-      border-radius: 14px;
-      padding: 16px;
-      margin-bottom: 28px;
-      text-align: left;
-      color: #445;
-      font-size: 0.9rem;
-      line-height: 1.8;
+      background: #f0f6ff; border-radius: 14px;
+      padding: 16px; margin-bottom: 28px;
+      text-align: left; color: #445;
+      font-size: 0.9rem; line-height: 2;
     }
 
     /* ── PROGRESS ── */
-    .top-bar {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 20px;
-    }
-    .progress-wrap {
-      flex: 1;
-      background: #eee;
-      border-radius: 99px;
-      height: 10px;
-      overflow: hidden;
-    }
+    .top-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .progress-wrap { flex: 1; background: #eee; border-radius: 99px; height: 10px; overflow: hidden; }
     .progress-fill {
       height: 100%;
       background: linear-gradient(90deg, #f7971e, #ffd200);
@@ -69,124 +49,107 @@
     }
     .progress-label { font-size: 0.82rem; color: #888; white-space: nowrap; }
     .score-badge {
-      font-size: 0.82rem;
-      font-weight: bold;
-      color: #2c3e8c;
-      background: #e8f0fe;
-      border-radius: 99px;
-      padding: 4px 10px;
-      white-space: nowrap;
+      font-size: 0.82rem; font-weight: bold;
+      color: #2c3e8c; background: #e8f0fe;
+      border-radius: 99px; padding: 4px 10px; white-space: nowrap;
     }
 
-    /* ── QUESTION TYPE BADGE ── */
+    /* ── TYPE BADGE ── */
     .type-badge {
-      display: inline-block;
-      font-size: 0.78rem;
-      padding: 4px 12px;
-      border-radius: 99px;
-      margin-bottom: 12px;
-      font-weight: bold;
+      display: inline-block; font-size: 0.78rem;
+      padding: 4px 12px; border-radius: 99px;
+      margin-bottom: 14px; font-weight: bold;
     }
     .type-a { background: #e8f0fe; color: #1a56c4; }
     .type-b { background: #fef3e2; color: #b45a00; }
 
-    /* ── SYMBOL BOX ── */
+    /* ── SYMBOL BOX (Type A: question) ── */
     .symbol-box {
-      background: #f5f7ff;
-      border-radius: 18px;
-      padding: 28px;
-      margin-bottom: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background: #f5f7ff; border-radius: 18px;
+      padding: 28px; margin-bottom: 16px;
+      display: flex; align-items: center; justify-content: center;
       border: 2px solid #e0e7ff;
     }
-    .symbol-box svg { width: 96px; height: 96px; }
+    .symbol-box svg { width: 100px; height: 100px; }
 
-    /* ── DESCRIPTION BOX ── */
-    .desc-box {
-      background: #fffbea;
-      border: 1px solid #ffe08a;
-      border-radius: 12px;
-      padding: 12px 16px;
-      margin-bottom: 20px;
-      font-size: 0.9rem;
-      color: #6b4e00;
-      text-align: left;
+    /* ── NAME BOX (Type B: question) ── */
+    .name-box {
+      background: #f5f7ff; border-radius: 18px;
+      padding: 28px 20px; margin-bottom: 16px;
+      border: 2px solid #e0e7ff;
     }
-    .question-label {
-      font-size: 1rem;
-      color: #444;
-      margin-bottom: 16px;
-    }
+    .name-kanji { font-size: 2.2rem; font-weight: bold; color: #2c3e8c; }
+    .name-kana  { font-size: 1rem; color: #667; margin-top: 4px; }
 
-    /* ── CHOICES ── */
-    .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
-    .choice-btn {
+    .question-label { font-size: 1rem; color: #444; margin-bottom: 16px; }
+
+    /* ── TEXT CHOICES (Type A) ── */
+    .choices-text { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+    .choice-text-btn {
       padding: 14px 8px;
-      border: 2.5px solid #dde;
-      border-radius: 14px;
-      background: #fff;
-      font-size: 0.95rem;
-      font-family: inherit;
-      cursor: pointer;
+      border: 2.5px solid #dde; border-radius: 14px;
+      background: #fff; font-size: 0.95rem;
+      font-family: inherit; cursor: pointer;
       transition: border-color 0.15s, background 0.15s, transform 0.12s;
       line-height: 1.4;
     }
-    .choice-btn:hover:not(:disabled) {
-      border-color: #1a73e8;
-      background: #f0f6ff;
-      transform: translateY(-2px);
+    .choice-text-btn:hover:not(:disabled) {
+      border-color: #1a73e8; background: #f0f6ff; transform: translateY(-2px);
     }
-    .choice-btn:active:not(:disabled) { transform: translateY(0); }
-    .choice-btn.correct  { border-color: #34a853; background: #e6f4ea; color: #1e6e37; font-weight: bold; }
-    .choice-btn.wrong    { border-color: #ea4335; background: #fce8e6; color: #b31d11; }
-    .choice-btn:disabled { cursor: default; }
+
+    /* ── SVG CHOICES (Type B) ── */
+    .choices-sym { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 16px; }
+    .choice-sym-btn {
+      padding: 16px; aspect-ratio: 1;
+      border: 2.5px solid #dde; border-radius: 14px;
+      background: #fff; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: border-color 0.15s, background 0.15s, transform 0.12s;
+    }
+    .choice-sym-btn svg { width: 68px; height: 68px; pointer-events: none; }
+    .choice-sym-btn:hover:not(:disabled) {
+      border-color: #1a73e8; background: #f0f6ff; transform: translateY(-2px);
+    }
+    .choice-sym-btn:active:not(:disabled) { transform: translateY(0); }
+
+    /* Shared correct/wrong states */
+    .correct { border-color: #34a853 !important; background: #e6f4ea !important; }
+    .wrong   { border-color: #ea4335 !important; background: #fce8e6 !important; }
+    .choice-text-btn.correct { color: #1e6e37; font-weight: bold; }
+    .choice-text-btn.wrong   { color: #b31d11; }
+    .choice-text-btn:disabled, .choice-sym-btn:disabled { cursor: default; }
 
     /* ── FEEDBACK ── */
     .feedback {
-      padding: 12px 16px;
-      border-radius: 12px;
-      font-size: 0.92rem;
-      margin-bottom: 16px;
-      display: none;
-      text-align: left;
-      line-height: 1.5;
+      padding: 12px 16px; border-radius: 12px;
+      font-size: 0.92rem; margin-bottom: 16px;
+      display: none; text-align: left; line-height: 1.6;
     }
-    .feedback.show      { display: block; }
-    .feedback.ok  { background: #e6f4ea; border: 1px solid #a8d5b5; color: #1e6e37; }
-    .feedback.ng  { background: #fce8e6; border: 1px solid #f5b9b4; color: #b31d11; }
+    .feedback.show  { display: block; }
+    .feedback.ok    { background: #e6f4ea; border: 1px solid #a8d5b5; color: #1e6e37; }
+    .feedback.ng    { background: #fce8e6; border: 1px solid #f5b9b4; color: #b31d11; }
 
     /* ── BUTTONS ── */
     .btn {
-      display: inline-block;
-      padding: 14px 36px;
-      border: none;
-      border-radius: 99px;
-      font-size: 1.05rem;
-      font-family: inherit;
-      font-weight: bold;
-      cursor: pointer;
+      display: inline-block; padding: 14px 36px;
+      border: none; border-radius: 99px;
+      font-size: 1.05rem; font-family: inherit;
+      font-weight: bold; cursor: pointer;
       transition: transform 0.15s, box-shadow 0.15s;
     }
     .btn-primary {
       background: linear-gradient(135deg, #1a73e8, #6c3db5);
-      color: #fff;
-      box-shadow: 0 4px 18px rgba(26,115,232,0.4);
+      color: #fff; box-shadow: 0 4px 18px rgba(26,115,232,0.4);
     }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(26,115,232,0.45); }
-    .btn-secondary {
-      background: #f1f3f4;
-      color: #444;
-    }
+    .btn-secondary { background: #f1f3f4; color: #444; }
     .btn-secondary:hover { background: #e3e6e8; }
 
     /* ── RESULT ── */
     .result-emoji { font-size: 3.5rem; margin-bottom: 12px; }
     .result-title { font-size: 1.6rem; font-weight: bold; color: #2c3e8c; margin-bottom: 20px; }
     .score-ring {
-      width: 140px; height: 140px;
-      border-radius: 50%;
+      width: 140px; height: 140px; border-radius: 50%;
       background: linear-gradient(135deg, #f7971e, #ffd200);
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
@@ -195,16 +158,14 @@
     }
     .score-ring .num { font-size: 2.8rem; font-weight: bold; color: #fff; line-height: 1; }
     .score-ring .den { font-size: 0.9rem; color: rgba(255,255,255,0.9); }
-    .result-msg { font-size: 1.05rem; color: #555; margin-bottom: 8px; }
-    .result-pct { font-size: 0.9rem; color: #888; margin-bottom: 28px; }
+    .result-msg  { font-size: 1.05rem; color: #555; margin-bottom: 8px; }
+    .result-pct  { font-size: 0.9rem; color: #888; margin-bottom: 28px; }
     .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
     /* ── REVIEW TABLE ── */
     .review-wrap {
-      max-height: 340px;
-      overflow-y: auto;
-      margin-bottom: 20px;
-      border-radius: 12px;
+      max-height: 340px; overflow-y: auto;
+      margin-bottom: 20px; border-radius: 12px;
       border: 1px solid #e0e0e0;
     }
     table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
@@ -212,12 +173,12 @@
     td { padding: 8px 10px; border-top: 1px solid #f0f0f0; vertical-align: middle; }
     td svg { width: 36px; height: 36px; }
     .ok-mark { color: #34a853; font-weight: bold; }
-    .ng-mark { color: #ea4335; font-weight: bold; }
+    .ng-mark  { color: #ea4335; font-weight: bold; }
 
     @media (max-width: 400px) {
       .card { padding: 24px 16px; }
-      .choices { grid-template-columns: 1fr; }
       .start-title { font-size: 1.6rem; }
+      .choice-sym-btn svg { width: 52px; height: 52px; }
     }
   </style>
 </head>
@@ -234,8 +195,8 @@ const SYMBOLS = [
     short: 'たんぼ',
     desc: 'いねを切り取ったあとの切りかぶの形',
     svg: `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-      <line x1="18" y1="8" x2="18" y2="52" stroke="#222" stroke-width="5.5" stroke-linecap="round"/>
-      <line x1="42" y1="8" x2="42" y2="52" stroke="#222" stroke-width="5.5" stroke-linecap="round"/>
+      <line x1="18" y1="8"  x2="18" y2="52" stroke="#222" stroke-width="5.5" stroke-linecap="round"/>
+      <line x1="42" y1="8"  x2="42" y2="52" stroke="#222" stroke-width="5.5" stroke-linecap="round"/>
     </svg>`
   },
   {
@@ -252,7 +213,7 @@ const SYMBOLS = [
     desc: '形にかんけいのない、たんなる記号',
     svg: `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
       <circle cx="30" cy="30" r="24" stroke="#222" stroke-width="3.5" fill="none"/>
-      <circle cx="30" cy="30" r="9" stroke="#222" stroke-width="3.5" fill="none"/>
+      <circle cx="30" cy="30" r="9"  stroke="#222" stroke-width="3.5" fill="none"/>
     </svg>`
   },
   {
@@ -260,8 +221,8 @@ const SYMBOLS = [
     short: 'ゆうびんきょく',
     desc: '逓信省の「テ」の文字を記号にしたもの',
     svg: `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-      <line x1="6"  y1="16" x2="54" y2="16" stroke="#222" stroke-width="5" stroke-linecap="round"/>
-      <line x1="30" y1="16" x2="30" y2="54" stroke="#222" stroke-width="5" stroke-linecap="round"/>
+      <line x1="6"  y1="16" x2="54" y2="16" stroke="#222" stroke-width="5"   stroke-linecap="round"/>
+      <line x1="30" y1="16" x2="30" y2="54" stroke="#222" stroke-width="5"   stroke-linecap="round"/>
       <line x1="15" y1="33" x2="45" y2="33" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
     </svg>`
   },
@@ -280,9 +241,12 @@ const SYMBOLS = [
     short: 'しょうぼうしょ',
     desc: '昔、使われていた消ぼう局の道具の形',
     svg: `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-      <line x1="30" y1="28" x2="30" y2="56" stroke="#222" stroke-width="5.5" stroke-linecap="round"/>
-      <line x1="30" y1="28" x2="8"  y2="8"  stroke="#222" stroke-width="5.5" stroke-linecap="round"/>
-      <line x1="30" y1="28" x2="52" y2="8"  stroke="#222" stroke-width="5.5" stroke-linecap="round"/>
+      <!-- stem -->
+      <line x1="30" y1="32" x2="30" y2="56" stroke="#222" stroke-width="5.5" stroke-linecap="round"/>
+      <!-- left arm: curves outward then arches up -->
+      <path d="M30,32 C22,30 10,26 12,8" stroke="#222" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <!-- right arm: curves outward then arches up -->
+      <path d="M30,32 C38,30 50,26 48,8" stroke="#222" stroke-width="5" fill="none" stroke-linecap="round"/>
     </svg>`
   },
   {
@@ -290,11 +254,9 @@ const SYMBOLS = [
     short: 'ろうじんほーむ',
     desc: 'たてものと、お年よりが使うつえの形',
     svg: `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-      <!-- house body -->
       <polygon points="26,8 50,28 50,52 2,52 2,28" stroke="#222" stroke-width="3" fill="none" stroke-linejoin="round"/>
-      <!-- walking cane -->
-      <line x1="55" y1="28" x2="55" y2="54" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
-      <path d="M55,28 Q63,18 57,10" stroke="#222" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+      <line x1="55" y1="28" x2="55" y2="54"               stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M55,28 Q63,18 57,10"                        stroke="#222" stroke-width="3.5" fill="none" stroke-linecap="round"/>
     </svg>`
   },
   {
@@ -338,13 +300,10 @@ const SYMBOLS = [
     short: 'じんじゃ',
     desc: '神社の入り口にあるとりいの形',
     svg: `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-      <!-- pillars -->
       <line x1="16" y1="24" x2="16" y2="54" stroke="#222" stroke-width="4.5" stroke-linecap="round"/>
       <line x1="44" y1="24" x2="44" y2="54" stroke="#222" stroke-width="4.5" stroke-linecap="round"/>
-      <!-- upper beam (curved) -->
-      <path d="M6,22 Q30,12 54,22" stroke="#222" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-      <!-- lower beam -->
-      <line x1="12" y1="32" x2="48" y2="32" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
+      <path d="M6,22 Q30,12 54,22"            stroke="#222" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+      <line x1="12" y1="32" x2="48" y2="32"  stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
     </svg>`
   },
   {
@@ -352,10 +311,8 @@ const SYMBOLS = [
     short: 'てつどう',
     desc: '線路の形',
     svg: `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-      <!-- rails -->
       <line x1="4"  y1="22" x2="56" y2="22" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
       <line x1="4"  y1="38" x2="56" y2="38" stroke="#222" stroke-width="3.5" stroke-linecap="round"/>
-      <!-- sleepers -->
       <line x1="14" y1="16" x2="14" y2="44" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
       <line x1="30" y1="16" x2="30" y2="44" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
       <line x1="46" y1="16" x2="46" y2="44" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
@@ -366,9 +323,9 @@ const SYMBOLS = [
     short: 'としょかん',
     desc: '本を開いた形',
     svg: `<svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
-      <path d="M30,14 L8,22 L8,50 L30,42 Z"  stroke="#222" stroke-width="3" fill="none" stroke-linejoin="round"/>
+      <path d="M30,14 L8,22  L8,50  L30,42 Z" stroke="#222" stroke-width="3" fill="none" stroke-linejoin="round"/>
       <path d="M30,14 L52,22 L52,50 L30,42 Z" stroke="#222" stroke-width="3" fill="none" stroke-linejoin="round"/>
-      <line x1="30" y1="14" x2="30" y2="42" stroke="#222" stroke-width="2"/>
+      <line x1="30" y1="14" x2="30" y2="42"   stroke="#222" stroke-width="2"/>
     </svg>`
   },
   {
@@ -402,19 +359,20 @@ function shuffle(arr) {
 
 function buildQuestions() {
   return shuffle(SYMBOLS).map((sym, qi) => {
-    const wrong = shuffle(SYMBOLS.filter(s => s.name !== sym.name)).slice(0, 3).map(s => s.name);
-    // alternate question type: even = symbol→name, odd = desc→name
+    const wrongSyms = shuffle(SYMBOLS.filter(s => s.name !== sym.name)).slice(0, 3);
+    const choiceSyms = shuffle([sym, ...wrongSyms]);
+    // Type A: 記号→名前  /  Type B: 名前→記号
     const type = qi % 2 === 0 ? 'A' : 'B';
-    return { sym, choices: shuffle([sym.name, ...wrong]), type };
+    return { sym, choiceSyms, type };
   });
 }
 
 function scoreMsg(score, total) {
-  const pct = score / total;
-  if (pct === 1)   return ['🏆', 'かんぺき！地図記号マスターだ！'];
-  if (pct >= 0.8)  return ['🌟', 'すばらしい！ほぼかんぺき！'];
-  if (pct >= 0.6)  return ['😊', 'よくできました！もう少しで完ぺき！'];
-  if (pct >= 0.4)  return ['💪', 'もう一回チャレンジしてみよう！'];
+  const p = score / total;
+  if (p === 1)  return ['🏆', 'かんぺき！地図記号マスターだ！'];
+  if (p >= 0.8) return ['🌟', 'すばらしい！ほぼかんぺき！'];
+  if (p >= 0.6) return ['😊', 'よくできました！もう少しで完ぺき！'];
+  if (p >= 0.4) return ['💪', 'もう一回チャレンジしてみよう！'];
   return ['📚', '地図記号を勉強してからもう一度！'];
 }
 
@@ -437,9 +395,9 @@ function renderStart() {
     <div class="start-title">地図記号クイズ</div>
     <p class="start-sub">地図にかかれた記号の名前を当てよう！</p>
     <div class="start-info">
-      📍 記号を見て、正しい名前を4つの中から選ぼう！<br>
-      📍 偶数問は「もとになったもの」のせつめいから考えよう！<br>
-      📍 全${SYMBOLS.length}問に挑戦！
+      🔍 奇数問：<strong>記号を見て</strong>、名前を4つから選ぼう！<br>
+      💬 偶数問：<strong>名前を見て</strong>、正しい記号を4つから選ぼう！<br>
+      📝 全${SYMBOLS.length}問に挑戦！
     </div>
     <button class="btn btn-primary" id="startBtn">スタート！</button>
   `;
@@ -452,6 +410,19 @@ function renderQuiz() {
   const pct = (state.idx / tot) * 100;
   const isA = q.type === 'A';
 
+  // Build choice HTML
+  const choicesHtml = isA
+    ? `<div class="choices-text" id="choices">
+        ${q.choiceSyms.map((s, i) => `
+          <button class="choice-text-btn" data-idx="${i}">${s.name}</button>
+        `).join('')}
+       </div>`
+    : `<div class="choices-sym" id="choices">
+        ${q.choiceSyms.map((s, i) => `
+          <button class="choice-sym-btn" data-idx="${i}">${s.svg}</button>
+        `).join('')}
+       </div>`;
+
   app.innerHTML = `
     <div class="top-bar">
       <div class="progress-wrap">
@@ -462,24 +433,24 @@ function renderQuiz() {
     </div>
 
     <span class="type-badge ${isA ? 'type-a' : 'type-b'}">
-      ${isA ? '🔍 記号の名前を当てよう！' : '💬 せつめいから当てよう！'}
+      ${isA ? '🔍 記号の名前はなに？' : '💬 名前の記号はどれ？'}
     </span>
 
     ${isA
       ? `<div class="symbol-box">${q.sym.svg}</div>`
-      : `<div class="desc-box">💡 もとになったもの：<br><strong>${q.sym.desc}</strong></div>`
+      : `<div class="name-box">
+           <div class="name-kanji">${q.sym.short}</div>
+           <div class="name-kana">${q.sym.name}</div>
+         </div>`
     }
 
-    <p class="question-label">この地図記号は何の場所？</p>
+    <p class="question-label">
+      ${isA ? 'この地図記号は何の場所？' : 'この場所の地図記号はどれ？'}
+    </p>
 
-    <div class="choices" id="choices">
-      ${q.choices.map((c, i) => `
-        <button class="choice-btn" data-idx="${i}">${c}</button>
-      `).join('')}
-    </div>
+    ${choicesHtml}
 
     <div class="feedback" id="feedback"></div>
-
     <div id="nextWrap" style="display:none;margin-top:4px">
       <button class="btn btn-primary" id="nextBtn">
         ${state.idx + 1 < tot ? '次の問題 →' : '結果を見る！'}
@@ -487,7 +458,7 @@ function renderQuiz() {
     </div>
   `;
 
-  document.querySelectorAll('.choice-btn').forEach(btn => {
+  document.querySelectorAll('[data-idx]').forEach(btn => {
     btn.addEventListener('click', () => selectAnswer(parseInt(btn.dataset.idx)));
   });
 }
@@ -496,28 +467,25 @@ function selectAnswer(idx) {
   if (state.answered) return;
   state.answered = true;
 
-  const q       = state.questions[state.idx];
-  const chosen  = q.choices[idx];
-  const correct = q.sym.name;
-  const isOK    = chosen === correct;
+  const q      = state.questions[state.idx];
+  const chosen = q.choiceSyms[idx];
+  const isOK   = chosen.name === q.sym.name;
 
   if (isOK) state.score++;
   state.answers.push({ q, chosen, isOK });
 
-  document.querySelectorAll('.choice-btn').forEach(btn => {
+  document.querySelectorAll('[data-idx]').forEach(btn => {
     btn.disabled = true;
-    const val = q.choices[parseInt(btn.dataset.idx)];
-    if (val === correct) btn.classList.add('correct');
-    else if (val === chosen) btn.classList.add('wrong');
+    const s = q.choiceSyms[parseInt(btn.dataset.idx)];
+    if (s.name === q.sym.name)     btn.classList.add('correct');
+    else if (s.name === chosen.name) btn.classList.add('wrong');
   });
 
   const fb = document.getElementById('feedback');
   fb.className = `feedback show ${isOK ? 'ok' : 'ng'}`;
-  if (isOK) {
-    fb.innerHTML = `⭕ 正解！「<strong>${correct}</strong>」だよ！<br><small>もとになったもの：${q.sym.desc}</small>`;
-  } else {
-    fb.innerHTML = `❌ ざんねん… 正しくは「<strong>${correct}</strong>」だよ。<br><small>もとになったもの：${q.sym.desc}</small>`;
-  }
+  fb.innerHTML = isOK
+    ? `⭕ 正解！「<strong>${q.sym.name}</strong>」だよ！<br><small>💡 ${q.sym.desc}</small>`
+    : `❌ ざんねん… 正しくは「<strong>${q.sym.name}</strong>」だよ。<br><small>💡 ${q.sym.desc}</small>`;
 
   document.getElementById('nextWrap').style.display = 'block';
   document.getElementById('nextBtn').onclick = nextQuestion;
@@ -537,13 +505,12 @@ function renderResult() {
   const [emoji, msg] = scoreMsg(state.score, tot);
   const pct = Math.round((state.score / tot) * 100);
 
-  // build review rows
-  const rows = state.answers.map(({ q, chosen, isOK }) => `
+  const rows = state.answers.map(({ q, isOK }) => `
     <tr>
       <td>${isOK ? '<span class="ok-mark">⭕</span>' : '<span class="ng-mark">❌</span>'}</td>
+      <td>${q.type === 'A' ? '記号→名前' : '名前→記号'}</td>
       <td>${q.sym.svg}</td>
       <td style="text-align:left">${q.sym.name}</td>
-      <td style="text-align:left;color:${isOK ? '#1e6e37' : '#b31d11'}">${isOK ? '正解' : chosen}</td>
     </tr>
   `).join('');
 
@@ -560,19 +527,14 @@ function renderResult() {
     <div class="review-wrap">
       <table>
         <thead>
-          <tr>
-            <th>結果</th>
-            <th>記号</th>
-            <th>正しい名前</th>
-            <th>あなたの答え</th>
-          </tr>
+          <tr><th>結果</th><th>形式</th><th>記号</th><th>正しい名前</th></tr>
         </thead>
         <tbody>${rows}</tbody>
       </table>
     </div>
 
     <div class="btn-row">
-      <button class="btn btn-primary" id="retryBtn">もう一度チャレンジ！</button>
+      <button class="btn btn-primary"   id="retryBtn">もう一度チャレンジ！</button>
       <button class="btn btn-secondary" id="topBtn">最初に戻る</button>
     </div>
   `;
